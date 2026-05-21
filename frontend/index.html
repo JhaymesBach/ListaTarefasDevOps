@@ -8,11 +8,51 @@
 </head>
 <body>
     
-    <div class="container-titulo">
+    <div class="centraliza">
         <h1 class="titulo">
             Lista de Tarefas
         </h1>
+
+        
     </div>
+
+    <div class="centraliza">
+        <input  type="text" id="texto" placeholder="Digite algo" class="input"/>
+
+            <button onclick = "adicionar()" class="botaoadd">
+ adicionar
+    </button>
+
+    <button onclick="remover()" class="botaoremover">
+  remover
+</button>
+
+    </div>
+
+
+
+<ul id="lista"></ul>
+
+<script>
+  function adicionar() {
+
+    const valor = document.getElementById("texto").value;
+
+    document.getElementById("lista").innerHTML +=
+      "<li>" + valor + "</li>";
+  }
+</script>
+
+<script>
+function remover() {
+  const lista = document.getElementById("lista");
+  lista.removeChild(lista.lastElementChild);
+}
+</script>
+    
+
+
+
 
     <div>
         
